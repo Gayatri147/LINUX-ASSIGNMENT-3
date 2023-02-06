@@ -1,0 +1,89 @@
+1ST ANS)
+An inode (short for 'index node') is a data structure used by Linux to hold file information. Each inode in the Linux file system has a unique ID that identifies a single file or other item.
+On a Linux or Unix-like operating system, a PID stands for process identification number. When a process is created, it is automatically issued a PID. On a Unix-like system, a process is just a running instance of a programme, and each process has its own PID. Using the ps aux command and grep process name is the quickest technique to see if a process is running. Your process is running if you get output along with the process name/pid.
+2nd ans)
+A command is an instruction given to our computer by us to do whatever we want. In Mac OS, and Linux it is called terminal, whereas, in windows it is called command prompt. Commands are always case sensitive.
+Commands are executed by typing in at the command line followed by pressing enter key.
+This command further passes to the shell which reads the command and execute it. Shell is a method for the user to interact with the system. Default shell in Linux is called bash (Bourne-Again Shell).
+There are two types of shell commands:
+Built-in shell commands: They are part of a shell. Each shell has some built in commands.
+External/Linux commands: Each external command is a separate executable program written in C or other programming languages.
+The pwd command stands for (print working directory). It displays the current working location or directory of the user. It displays the whole working path starting with /. It is a built-in command.
+The ls command is used to show the list of a folder. It will list out all the files in the directed folder.
+The cd command stands for (change directory). It is used to change to the directory you want to work from the present directory.
+With mkdir command you can create your own directory.5th
+The rmdir command is used to remove a directory from your system.
+3rd ans)
+Virtual desktops are preconfigured images of operating systems and applications in which the desktop environment is separated from the physical device used to access it. Users can access their virtual desktops remotely over a network. Any endpoint device, such as a laptop, smartphone or tablet, can be used to access a virtual desktop. The virtual desktop provider installs client software on the endpoint device, and the user then interacts with that software on the device. 
+Virtual desktop providers abstract the operating system from a computer’s hardware with virtualization software. Instead of running on the hardware, the operating system, applications and data run on a virtual machine. An organization may host the virtual machine on premises. It is also common to run a virtual desktop on cloud-based virtual machines. Previously, only one user could access a virtual desktop from a single operating system. The technology has evolved to allow many users to share an operating system that is running multiple desktops.
+4th ans)
+The Vi editor has two modes: Command and Insert. When you first open a file with Vi, you are in Command mode. Command mode means you can use keyboard keys to navigate, delete, copy, paste, and do a number of other tasks—except entering text.
+To enter Insert mode, press i. In Insert mode, you can enter text, use the Enter key to go to a new line, use the arrow keys to navigate text, and use vi as a free-form text editor. To return to Command mode, press the Esc key once.
+In Vi's Command mode, almost every letter on the keyboard has a function.
+To save a file, you must first be in Command mode. Press Esc to enter Command mode, and then type :wq to write and quit the file. The other, quicker option is to use the keyboard shortcut ZZ to write and quit. In Vi, write means save, and quit means exit. If you’ve made mistakes along the way while editing and want to back out (abandon) all non-saved changes, enter Command mode by pressing Esc and typing :q! This command quits without saving any changes and exits Vi.
+Note: Always make a copy of an existing file prior to editing with Vi or any editor. This is especially critical when editing system and configuration files.
+5th ans)
+A daemon is a service process that runs in the background supervises the system or provides functionality to other processes. Traditionally, daemons are implemented following a scheme originating in SysV Unix. Modern daemons should follow a simpler yet more powerful scheme (here called "new-style"daemons), as implemented by system.
+Typically, UNIX-like systems execute numerous daemons, primarily for accommodating requests for services through other systems on the network, to hardware activity, and for responding to other programs as well.
+Examples of conditions or actions that could activate daemons into the activity can be a particular date or time, passage of a described time interval, receipt of a web request or email created from a specific communication line, and a file landing in a specific directory.
+A daemon is also called background processes. It is a UNIX or Linux program that executes inside the background. Almost every daemon contains names that finish with "d" the letter. For example, sshd, this manages connections of SSH remote access, or the httpd daemon that manages the Apache server. Often, Linux begins daemons at starting time.
+6th ans)
+In Linux, a process is an instance of executing a program or command. While these processes exist, they’ll be in one of the five possible states:
+Running or Runnable (R)
+Uninterruptible Sleep (D)
+Interruptable Sleep (S)
+Stopped (T)
+Zombie (Z)
+To visualize the lifecycle of the process, we can model it in a finite state machine:
+For any Linux process, their starting point is the moment they are created. For example, a parent process can initiate a child process using the fork() system call. Once it starts, the process goes into the running or runnable state. While the process is running, it could come into a code path that requires it to wait for particular resources or signals before proceeding. While waiting for the resources, the process would voluntarily give up the CPU cycles by going into one of the two sleeping states.
+Additionally, we could suspend a running process and put it into the stopped state. Usually, this is done by sending the SIGSTOP signal to the process. A process in this state will continue to exist until it is killed or resumed with SIGCONT. Finally, the process completes its lifecycle when it’s terminated and placed into a zombie state until its parent process clears it off the process table.
+7th ans)
+In Linux and Unix Systems Grep, short for “global regular expression print”, is a command used in searching and matching text files contained in the regular expressions. Furthermore, the command comes pre-installed in every Linux distribution. In this guide, we will look at Common grep command usage with a few examples.
+Grep command can be used to find or search a regular expression or a string in a text file. To demonstrate this, let’s create a text file welcome.txt and add some content as shown.
+grep "string" file name
+or
+filename grep "string"
+Example:grep "Linux" welcome.txt
+8th ans)
+System call provides an interface between user program and operating system. The structure of system call is as follows −
+Types of system calls
+The different system calls are as follows −
+System calls for Process management
+System calls for File management
+System calls for Directory management
+System calls for Process management
+A system is used to create a new process or a duplicate process called a fork.
+The duplicate process consists of all data in the file description and registers common. The original process is also called the parent process and the duplicate is called the child process.
+The fork call returns a value, which is zero in the child and equal to the child’s PID (Process Identifier) in the parent. The system calls like exit would request the services for terminating a process.
+Loading of programs or changing of the original image with duplicate needs execution of exec. Pid would help to distinguish between child and parent processes.
+Process management system calls in Linux.
+fork − For creating a duplicate process from the parent process.
+wait − Processes are supposed to wait for other processes to complete their work.
+exec − Loads the selected program into the memory.
+exit − Terminates the process.
+fork() − A parent process always uses a fork for creating a new child process. The child process is generally called a copy of the parent. After execution of fork, both parent and child execute the same program in separate processes.
+exec() − This function is used to replace the program executed by a process. The child sometimes may use exec after a fork for replacing the process memory space with a new program executable making the child execute a different program than the parent.
+exit() − This function is used to terminate the process.
+wait() − The parent uses a wait function to suspend execution till a child terminates. Using wait the parent can obtain the exit status of a terminated child.
+9th ans)
+In Linux, the command "ls" is one of the most commonly used. It's used to display a list of files and sub-directories in the current directory. If you're new to using the command line, the first command you should learn is probably ls.This command can be used by both regular users as well as system administrators.
+The ability to view what files are in a directory is what makes ls so important. It will be used frequently to display directory contents. Although it is not a complicated command, it does come with a number of options for listing files with additional information. Even while ls is always enough to list contents, you're likely to find a few of these options highly handy.
+ Linux Command "ls" options
+ ls -a	list all files including hidden file starting with '.'.
+ ls -d	list directories - with ' */'.
+ ls -l	list with long format - show permissions
+ ls -F	Append indicator (one of */=>@|) to entries.
+ ls -lh	This command will show you the file sizes in human readable format.
+ ls -r	list in reverse order.
+ ls -i	list file's inode(index) number.
+ 10th ans)
+ A redirection operator is a special character that can be used with a command, like a Command Prompt command or DOS command, to either redirect the input to the command or the output from the command.
+By default, when you execute a command, the input comes from the keyboard and the output is sent to the Command Prompt window. Command inputs and outputs are called command handles.
+The redirection operator is added after the normal command is written.
+How to Redirect Command Output to a File
+The ipconfig command is a common way to find various network settings through Command Prompt. One way to execute it is by entering ipconfig /all in the Command Prompt window
+When you do that, the results are displayed within Command Prompt and are then only useful elsewhere if you copy them from the Command Prompt screen. That is unless you use a redirection operator to redirect the results to a different place like a file.
+The dir command is another situation where a redirection operator is really useful. Since that command often produces results too long to read comfortably in a Command Prompt window, exporting all of it to a text document is wise.
+
+ 
+   
